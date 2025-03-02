@@ -1,10 +1,12 @@
-import { ProgressPlugin, WebpackPluginInstance } from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { ProgressPlugin, WebpackPluginInstance } from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import { BuildOptions } from "./types/config";
+import { BuildOptions } from './types/config';
 
-export const buildConfig = ({ paths }: BuildOptions): WebpackPluginInstance[] => {
+export const buildConfig = ({
+  paths,
+}: BuildOptions): WebpackPluginInstance[] => {
   return [
     new HtmlWebpackPlugin({ template: paths.html }),
     new ProgressPlugin(),

@@ -1,9 +1,1 @@
-import React, { FC } from "react";
-
-const MainPage: FC = () => {
-  return (
-    <div>Main</div>
-  )
-};
-
-export default MainPage;
+export { MainPageAsync as MainPage } from './ui/MainPage.async';

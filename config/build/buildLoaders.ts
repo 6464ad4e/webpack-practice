@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { RuleSetRule } from "webpack";
-import { BuildOptions } from "./types/config";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { RuleSetRule } from 'webpack';
+import { BuildOptions } from './types/config';
 
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
   const { isDev } = options;
@@ -16,20 +16,17 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
             auto: /\.module\.\w+$/i,
             localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
-          }
-        }
+          },
+        },
       },
-      "sass-loader",
+      'sass-loader',
     ],
   };
 
-  return [
-    typeScriptLoader,
-    cssLoader,
-  ]
+  return [typeScriptLoader, cssLoader];
 };

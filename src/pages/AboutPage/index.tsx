@@ -1,9 +1,1 @@
-import React, { FC } from "react";
-
-const AboutPage: FC = () => {
-  return (
-    <div>About</div>
-  )
-};
-
-export default AboutPage;
+export { AboutPageAsync as AboutPage } from './ui/AboutPage.async';

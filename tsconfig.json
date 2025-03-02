@@ -9,17 +9,26 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
+      "@pages/*": ["src/pages/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@shared/*": ["src/shared/*"]
+    },
     "plugins": [
-  {
-    "name": "typescript-plugin-css-modules",
-  }
-]
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",
-      "jsx": "react-jsx",
-    },
-    "include": ["src/**/*.ts", "src/**/*.tsx"],
-  }
+      "jsx": "react-jsx"
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
