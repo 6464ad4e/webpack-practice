@@ -5,6 +5,25 @@ import { BuildOptions } from './types/config';
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
   const { isDev } = options;
 
+  const svgLoader: RuleSetRule = {
+    test: /\.svg$/,
+    use: [
+      {
+        loader: '@svgr/webpack',
+        options: {
+          svgoConfig: {
+            plugins: [
+              {
+                name: 'removeAttrs',
+                params: { attrs: '(fill|stroke)' },
+              },
+            ],
+          },
+        },
+      },
+    ],
+  };
+
   const typeScriptLoader: RuleSetRule = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -28,5 +47,14 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
     ],
   };
 
-  return [typeScriptLoader, cssLoader];
+  const fileLoader: RuleSetRule = {
+    test: /\.(png|jpe?g|gif)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  };
+
+  return [fileLoader, svgLoader, typeScriptLoader, cssLoader];
 };

@@ -1,12 +1,12 @@
 export const classNames = (
   className: string,
-  mods: Record<string, boolean | string>,
-  additional: string[]
+  mods: Record<string, boolean | string> = {},
+  additional: string[] = []
 ): string =>
   [
     className,
-    ...additional,
+    ...additional.filter(Boolean),
     ...Object.entries(mods)
-      .filter(([_className, value]) => Boolean(value))
+      .filter(([_, value]) => Boolean(value))
       .map(([className]) => className),
   ].join(' ');
