@@ -56,5 +56,32 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
     ],
   };
 
-  return [fileLoader, svgLoader, typeScriptLoader, cssLoader];
+  // const babelLoader: RuleSetRule = {
+  //   test: /\.(?:js|ts|tsx)$/,
+  //   exclude: /node_modules/,
+  //   use: {
+  //     loader: 'babel-loader',
+  //     options: {
+  //       targets: 'defaults',
+  //       presets: [['@babel/preset-env']],
+  //       plugins: [
+  //         [
+  //           '18next-extract',
+  //           {
+  //             locales: ['en', 'ru'],
+  //             keyAsDefaultValue: true,
+  //           },
+  //         ],
+  //       ],
+  //     },
+  //   },
+  // };
+
+  return [
+    fileLoader,
+    svgLoader,
+    // babelLoader,
+    typeScriptLoader,
+    cssLoader,
+  ];
 };

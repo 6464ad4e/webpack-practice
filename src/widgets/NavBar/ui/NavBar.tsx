@@ -1,23 +1,25 @@
 import { FC } from 'react';
 import { AppLink } from '@shared/ui';
+import { AppLinkTheme } from '@shared/ui';
 import { classNames } from '@shared/lib/classNames';
 
 import cls from './NavBar.module.sass';
-import { AppLinkTheme } from '@shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
 
 interface NavBarProps {
   className?: string;
 }
 
-export const NavBar: FC<NavBarProps> = ({ className }) => {
+export const Navbar: FC<NavBarProps> = ({ className }) => {
+  const { t } = useTranslation();
   return (
-    <div className={classNames(cls.NavBar, {}, [className])}>
+    <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={classNames(cls.links)}>
         <AppLink to="/" theme={AppLinkTheme.PRIMARY}>
-          Main
+          {t('main')}
         </AppLink>
         <AppLink to="/about" theme={AppLinkTheme.PRIMARY}>
-          About
+          {t('about')}
         </AppLink>
       </div>
     </div>

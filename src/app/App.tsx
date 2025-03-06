@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import { AppRouter } from '@app/providers/Routes';
-import { ThemeSwitcher } from '@widgets/ThemeSwitcher/ui/ThemeSwitcher';
+import { Navbar } from '@widgets/Navbar';
+import { Sidebar } from '@widgets/Sidebar';
 import { useTheme } from '@shared/lib/useTheme/lib/useTheme';
 import { classNames } from '@shared/lib/classNames';
 
@@ -10,8 +12,13 @@ export const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <ThemeSwitcher />
-      <AppRouter />
+      <Suspense fallback={<div />}>
+        <Navbar />
+        <div className={classNames('content-page')}>
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 };
