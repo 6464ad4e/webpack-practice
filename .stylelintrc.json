@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "defaultSeverity": "warning",
+  "customSyntax": "postcss-sass",
+  "rules": {
+    "selector-class-pattern": null,
+    "declaration-property-value-disallowed-list": null
+  }
+}
