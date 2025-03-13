@@ -5,7 +5,7 @@ import { useTheme } from '@shared/lib/useTheme';
 
 import ThemeIcon from '@shared/assets/icons/theme-light-icon.svg';
 
-import cls from './ThemeSwitcher.module.sass';
+import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
   className?: string;

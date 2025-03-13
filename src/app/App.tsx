@@ -5,7 +5,7 @@ import { Sidebar } from '@widgets/Sidebar';
 import { useTheme } from '@shared/lib/useTheme/lib/useTheme';
 import { classNames } from '@shared/lib/classNames';
 
-import './styles/index.sass';
+import './styles/index.scss';
 
 export const App = () => {
   const { theme } = useTheme();

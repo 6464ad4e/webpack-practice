@@ -4,7 +4,7 @@ import { ThemeSwitcher } from '@widgets/ThemeSwitcher';
 import { LangSwitcher } from '@widgets/LangSwitcher';
 import { classNames } from '@shared/lib/classNames';
 
-import cls from './Sidebar.module.sass';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
