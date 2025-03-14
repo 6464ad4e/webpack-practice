@@ -12,9 +12,10 @@
         "useBuiltIns": "usage",
         "corejs": "3.6.5"
       }
-    ]
-  ],
-  "plugins": [
-    "18next-extract"
+    ],
+    "@babel/preset-typescript"
   ]
+  // "plugins": [
+  //   "18next-extract"
+  // ]
 }
