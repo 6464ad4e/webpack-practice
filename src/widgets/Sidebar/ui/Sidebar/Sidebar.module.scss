@@ -8,9 +8,10 @@
 }
 
 .collapsed {
-  transform: translateX(
-    calc(var(--sidebar-width-collapsed) - var(--sidebar-width))
-  );
+  transform:
+    translateX(
+      calc(var(--sidebar-width-collapsed) - var(--sidebar-width))
+    );
 }
 
 .navbar-switcher {

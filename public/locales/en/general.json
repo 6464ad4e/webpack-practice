@@ -3,5 +3,6 @@
   "change_lang": "Change language",
   "main": "Main",
   "about": "About",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "not_found_page": "Page not found"
 }
