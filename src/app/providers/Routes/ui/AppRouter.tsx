@@ -1,9 +1,8 @@
 import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routesConfig } from '../config/routesConfig';
-import { classNames } from '@shared/lib/classNames';
-
 import { PageLoader } from '@widgets/PageLoader';
+import { classNames } from '@shared/lib/classNames';
 
 export const AppRouter: FC = () => {
   return (

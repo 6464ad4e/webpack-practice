@@ -16,7 +16,8 @@ i18n
       escapeValue: false,
     },
     supportedLngs: ['en', 'ru'],
-    ns: ['general'],
+    ns: ['general', 'errors'],
+    defaultNS: 'general',
   });
 
 export default i18n;

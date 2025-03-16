@@ -9,7 +9,7 @@ interface NotFoundPageProps {
 }
 
 export const NotFoundPage: FC<NotFoundPageProps> = ({}) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('errors');
 
   return (
     <div className={classNames(cls.NotFoundPage)}>{t('not_found_page')}</div>
